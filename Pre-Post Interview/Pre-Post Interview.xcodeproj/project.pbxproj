@@ -13,6 +13,9 @@
 		3DDF40D71AAA95CD00CEDE4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF40D61AAA95CD00CEDE4F /* Images.xcassets */; };
 		3DDF40DA1AAA95CD00CEDE4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF40D81AAA95CD00CEDE4F /* LaunchScreen.xib */; };
 		3DDF40E61AAA95CE00CEDE4F /* Pre_Post_InterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF40E51AAA95CE00CEDE4F /* Pre_Post_InterviewTests.swift */; };
+		3DDF41111AAB518F00CEDE4F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF41101AAB518F00CEDE4F /* LoginViewController.swift */; };
+		3DDF41131AAB556700CEDE4F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF41121AAB556700CEDE4F /* RegisterViewController.swift */; };
+		3DDF41151AAB579F00CEDE4F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF41141AAB579F00CEDE4F /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		3DDF40DF1AAA95CE00CEDE4F /* Pre-Post InterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pre-Post InterviewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDF40E41AAA95CE00CEDE4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DDF40E51AAA95CE00CEDE4F /* Pre_Post_InterviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pre_Post_InterviewTests.swift; sourceTree = "<group>"; };
+		3DDF41101AAB518F00CEDE4F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3DDF41121AAB556700CEDE4F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3DDF41141AAB579F00CEDE4F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 			children = (
 				3DDF40CF1AAA95CD00CEDE4F /* AppDelegate.swift */,
 				3DDF40D11AAA95CD00CEDE4F /* ViewController.swift */,
+				3DDF41101AAB518F00CEDE4F /* LoginViewController.swift */,
+				3DDF41121AAB556700CEDE4F /* RegisterViewController.swift */,
+				3DDF41141AAB579F00CEDE4F /* API.swift */,
 				3DDF40D31AAA95CD00CEDE4F /* Main.storyboard */,
 				3DDF40D61AAA95CD00CEDE4F /* Images.xcassets */,
 				3DDF40D81AAA95CD00CEDE4F /* LaunchScreen.xib */,
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDF41111AAB518F00CEDE4F /* LoginViewController.swift in Sources */,
 				3DDF40D21AAA95CD00CEDE4F /* ViewController.swift in Sources */,
 				3DDF40D01AAA95CD00CEDE4F /* AppDelegate.swift in Sources */,
+				3DDF41131AAB556700CEDE4F /* RegisterViewController.swift in Sources */,
+				3DDF41151AAB579F00CEDE4F /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +417,7 @@
 				3DDF40EB1AAA95CE00CEDE4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DDF40EC1AAA95CE00CEDE4F /* Build configuration list for PBXNativeTarget "Pre-Post InterviewTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				3DDF40EE1AAA95CE00CEDE4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
