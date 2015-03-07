@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bLe-JP-k73">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fa2-bS-1gL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-500" y="-134"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Upcoming Table View Controller-->
         <scene sceneID="me2-2i-o1j">
             <objects>
-                <tableViewController id="ND6-h4-zej" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="upcomingEvents" id="ND6-h4-zej" customClass="UpcomingTableViewController" customModule="Pre_Post_Interview" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Tx1-Np-3eK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,10 +46,13 @@
                             <outlet property="delegate" destination="ND6-h4-zej" id="c0O-OV-4d0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ksY-98-Mod"/>
-                    <connections>
-                        <segue destination="epQ-nU-pOM" kind="presentation" identifier="showLogin" id="0VU-GS-q9h"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="ksY-98-Mod">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="w8n-1Z-JTk">
+                            <connections>
+                                <action selector="logoutButton:" destination="ND6-h4-zej" id="BWd-uO-f09"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2i-fd-Jsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,7 +61,7 @@
         <!--Login View Controller-->
         <scene sceneID="NeP-kL-Oeu">
             <objects>
-                <viewController id="epQ-nU-pOM" customClass="LoginViewController" customModule="Pre_Post_Interview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="epQ-nU-pOM" customClass="LoginViewController" customModule="Pre_Post_Interview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NsG-E0-uwd"/>
                         <viewControllerLayoutGuide type="bottom" id="22J-Y3-Pz3"/>

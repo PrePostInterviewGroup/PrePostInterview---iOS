@@ -22,20 +22,23 @@ class RegisterViewController: UIViewController {
     
         if let token = User.currentUser().token {
             
-            println(token)
+//            println(token)
+            // segue to another controller
             
         }else{
             
-            User.currentUser().getUserToken(emailText.text, password: passwordText.text, verifyPassword: verifyPassword.text)
+            User.currentUser().createUserToken(emailText.text, password: passwordText.text, verifyPassword: verifyPassword.text)
             
             
-            let username = usernameText.text;
-            let userEmail = emailText.text;
-            let userPassword = passwordText.text;
-            let userVerifyPassword = verifyPassword.text;
+            let username = usernameText.text
+            let userEmail = emailText.text
+            let userPassword = passwordText.text
+            let userVerifyPassword = verifyPassword.text
             
             
         }
+       
+        
         func displayMyAlertMessage(userMessage:String){
             
             var myAlert = UIAlertController(title: "Invalid", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)

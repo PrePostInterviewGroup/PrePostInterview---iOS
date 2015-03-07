@@ -116,7 +116,7 @@ class User {
         let defaults = NSUserDefaults.standardUserDefaults()
         token = defaults.objectForKey("token") as? String
         
-        println(token)
+//        println(token)
         
     }
     
@@ -124,10 +124,9 @@ class User {
     
     
     
-    func getUserToken(email: String, password: String, verifyPassword: String) {
+    func createUserToken(email: String, password: String, verifyPassword: String) {
         
         // sign up
-        println("Yo")
         let options: [String:AnyObject] = [
             
             "endpoint" : "users",
@@ -144,7 +143,7 @@ class User {
         
         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
             
-                println(responseInfo)
+//                println(responseInfo)
             
             let dataInfo = responseInfo["user"] as [String:String]
             self.token = dataInfo["authentication_token"]
@@ -158,17 +157,17 @@ class User {
         
     }
     
-    func loginToken(username: String, password: String) {
+    func loginToken(email: String, password: String, completion: () -> ()) {
         
         // login
-        
+//        println(email)
         let options: [String:AnyObject] = [
             
             "endpoint" : "users/sign_in",
             "method" : "POST",
             "body" : [
                 
-                "user" : [ "email" : username, "password" : password]
+                "user" : [ "email" : email, "password" : password]
                 
                 
             ]
@@ -178,11 +177,13 @@ class User {
         
         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
             
-            //    println(responseInfo)
+//                println(responseInfo)
+                println("hey")
             
-            let dataInfo = responseInfo["user"] as [String:String]
-            self.token = dataInfo["authentication_token"]
+            let dataInfo = responseInfo["user"] as [String:AnyObject]
+            self.token = dataInfo["authentication_token"] as? String
             
+            completion()
             
             // do something here after the request is done
             
@@ -192,6 +193,34 @@ class User {
         
     }
     
+    func logoutUserToken() {
+        
+        // sign up
+        let options: [String:AnyObject] = [
+            
+            "endpoint" : "users/sign_out",
+            "method" : "DELETE",
+            "body" : [
+                
+                "authentication_token": token!
+                
+                
+            ]
+            
+            
+        ]
+        
+        APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
+            
+            
+            // do something here after the request is done
+            
+        })
+        
+        token = nil
+
+        
+    }
     
     func getLeaderboard(username: String, password: String) {
         
