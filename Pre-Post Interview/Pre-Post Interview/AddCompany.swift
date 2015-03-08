@@ -9,8 +9,21 @@
 import UIKit
 
 class AddCompany: UITableViewController {
+    
     @IBOutlet weak var companyName: UITextField!
 
+
+    @IBAction func saveButton(sender: AnyObject) {
+        
+        FeedData.mainData().companies.append(companyName.text)
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+    }
+  
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +47,11 @@ class AddCompany: UITableViewController {
 //        return 0
 //    }
 
+    @IBAction func cancelButton(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     @IBAction func saveCompany(sender: AnyObject) {
         
         println("this is the company name: \(companyName.text)")

@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
  
     @IBOutlet weak var buttonButtomConstraint: NSLayoutConstraint!
     
+
+    
     @IBOutlet weak var emailText: UITextField!
     
     @IBOutlet weak var passwordText: UITextField!
@@ -22,12 +24,13 @@ class LoginViewController: UIViewController {
         
         navigationController?.navigationBarHidden = true
         
+        
         NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
             
             if let kbSize = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size {
                 
                 //    does not animate because of constraints you have to do self.view.layoutIfNeeded()
-                self.buttonButtomConstraint.constant = 20 + kbSize.height
+                self.buttonButtomConstraint.constant = 15 + kbSize.height
                 
                 self.view.layoutIfNeeded()
                 // animates
@@ -41,7 +44,7 @@ class LoginViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification) -> Void in
             
             
-            self.buttonButtomConstraint.constant = 20
+            self.buttonButtomConstraint.constant = 15
             
             self.view.layoutIfNeeded()
             

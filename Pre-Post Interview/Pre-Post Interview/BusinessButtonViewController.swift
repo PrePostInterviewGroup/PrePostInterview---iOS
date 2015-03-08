@@ -25,10 +25,10 @@ class BusinessButtonViewController: UIViewController {
         
         
         
-        var listComp = storyboard?.instantiateViewControllerWithIdentifier("compNavi") as UINavigationController
-        
-        presentViewController(listComp, animated: false, completion: nil)
-        
+//        var listComp = storyboard?.instantiateViewControllerWithIdentifier("compNavi") as UINavigationController
+//        
+//        presentViewController(listComp, animated: false, completion: nil)
+         self.dismissViewControllerAnimated(true, completion: nil)
     
     }
     

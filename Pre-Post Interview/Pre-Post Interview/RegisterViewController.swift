@@ -17,6 +17,12 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var verifyPassword: UITextField!
     
+    @IBOutlet weak var buttonButtomConstraint1: NSLayoutConstraint!
+    
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    
+
+
     @IBAction func registerButton(sender: AnyObject) {
         
         
@@ -46,6 +52,41 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBarHidden = true
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+            
+            if let kbSize = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size {
+                
+                //    does not animate because of constraints you have to do self.view.layoutIfNeeded()
+                self.buttonButtomConstraint1.constant = 8 + kbSize.height
+                
+                self.topConstraint.constant -= 10
+                
+                self.view.layoutIfNeeded()
+                // animates
+                //           self.view.frame.origin.y = -kbSize.height
+                
+            }
+            
+        }
+        
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification) -> Void in
+            
+            
+            self.buttonButtomConstraint1.constant = 20
+            
+            self.topConstraint.constant += 10
+            
+            self.view.layoutIfNeeded()
+            
+            
+        })
+
+        
+        
     }
     
 }//END

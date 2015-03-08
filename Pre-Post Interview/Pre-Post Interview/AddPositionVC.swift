@@ -25,15 +25,39 @@ class AddPositionVC: UIViewController {
         let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addCell")
         self.navigationItem.rightBarButtonItem = button
         
+//        let cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addCells")
+//        self.navigationItem.toolbar
     }
+    
+    func perform() {
+        
+        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+//    #import "DismissSegue.h"
+//    
+//    @implementation DismissSegue
+//    
+//    - (void)perform
+//    {
+//    UIViewController *controller = self.sourceViewController;
+//    [controller.parentViewController dismissViewControllerAnimated:YES
+//    completion:nil];
+//    }
+//    
+//    @end
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+
     
-    var array = []
+    
+    var array:[String] = []
+    
     
     func addCell() {
         
@@ -43,15 +67,26 @@ class AddPositionVC: UIViewController {
         let dateFormatter: NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy-- hh:mm"
         
-        println(dateFormatter.stringFromDate(interviewDatePicker.date))
+        
+        var testString = dateFormatter.stringFromDate(interviewDatePicker.date) + addPositionLabel.text
+        
+        
+        println(testString)
+        
+ 
+        array.append(testString)
+        
+        //     var new1 = dateFormatter.stringFromDate(interviewDatePicker.date) as String
         
         
         
+//        array.append((dateFormatter.stringFromDate(interviewDatePicker.date)+addPositionLabel.text))
         
-//        array = [addPositionLabel.text + interviewDate]
+    
+
         
         
-        
+//        
         addPositionTableView.reloadData()
         
     }
@@ -108,7 +143,7 @@ class AddPositionVC: UIViewController {
         
         
         
-        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 20)
+        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 24)
         cell.textLabel?.textColor = UIColor(red: 0.58, green: 0.84, blue: 0.79, alpha: 1)
         
         cell.textLabel?.text = newProject

@@ -76,25 +76,34 @@ class CompanyTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Potentially incomplete method implementation.
+//        // Return the number of sections.
+//        return 0
+//    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return companies.count
+//        return companies.count
+        
+        return FeedData.mainData().companies.count
     }
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("compCells", forIndexPath: indexPath) as UITableViewCell
 
-        let company = companies[indexPath.row]
+       // let company = companies[indexPath.row]
         
-        cell.textLabel?.text = company.name
+        let company = FeedData.mainData().companies[indexPath.row]
+        
+//        cell.textLabel?.text = company.name
+        
+        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 24)
+        cell.textLabel?.textColor = UIColor(red: 0.58, green: 0.84, blue: 0.79, alpha: 1)
+        
+        cell.textLabel?.text = company
         
         // Configure the cell...
 
@@ -108,6 +117,24 @@ class CompanyTableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+//        var businessButtonVC = self.storyboard?.instantiateViewControllerWithIdentifier("compDetail") as BusinessButtonViewController
+//        
+//        self.navigationController?.pushViewController(businessButtonVC, animated: true)
+    
+//        let indexPath = tableView.indexPathForSelectedRow()
+//        
+//        let currentCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath!)!
+//        
+//        println(currentCell.textLabel!.text)
+        
+        
+//        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//        NSString *str = cell.textLabel.text;
+        
+    }
 
     /*
     // Override to support editing the table view.
