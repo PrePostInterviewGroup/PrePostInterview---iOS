@@ -377,7 +377,6 @@
         <!--Navigation Controller-->
         <scene sceneID="2X0-Hl-SP6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eof-5d-obb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="loginNC" automaticallyAdjustsScrollViewInsets="NO" id="Wie-0C-h6U" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k3K-bk-tCJ">
@@ -389,6 +388,7 @@
                         <segue destination="epQ-nU-pOM" kind="relationship" relationship="rootViewController" id="Gy1-jO-IKu"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eof-5d-obb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1655" y="-814"/>
         </scene>
