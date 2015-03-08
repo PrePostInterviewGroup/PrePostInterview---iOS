@@ -23,11 +23,8 @@ class APIRequest {
             "endpoint" : endpoint,
             "method" : method,
             "body" : [
-                //          "user" : ["auth_token" : User.currentUser().token!]
-                "auth_token" : [User.currentUser().token!]
-            ]
-            
-            ] as [String: AnyObject]
+
+            "auth_token" : [User.currentUser().token!]]] as [String: AnyObject]
         
         requestWithOptions(options, andCompletion: completion)
         
@@ -67,27 +64,10 @@ class APIRequest {
                     
                     completion(responseInfo: json)
                     
-                } else {
-                    
-                    //    println("no json")
-                    
                 }
-                
-                
-            }else{
-                
-                //    println(error)
-                
-                
-                
             }
-            
         }
-        
-        
-        
     }
-    
 }
 
 
@@ -200,11 +180,8 @@ class User {
             "body" : [
                 
                 "authentication_token": token!
-                
-                
+        
             ]
-            
-            
         ]
         
         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
@@ -218,44 +195,6 @@ class User {
 
         
     }
-    
-    func getLeaderboard(username: String, password: String) {
-        
-        // sign up
-        
-        let options: [String:AnyObject] = [
-            
-            "endpoint" : "leaderboard",
-            "method" : "Get",
-            "body" : [
-                
-                "leaderboard" : [ "" ]
-                
-                
-            ]
-            
-            
-        ]
-        
-        APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
-            
-            //    println(responseInfo)
-            
-            let dataInfo = responseInfo["user"] as [String:String]
-            self.token = dataInfo["authentication_token"]
-            
-            
-            // do something here after the request is done
-            
-        })
-        
-        
-        
-    }
-    
-    
-    
-    
     
     
     

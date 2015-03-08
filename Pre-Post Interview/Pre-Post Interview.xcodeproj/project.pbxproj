@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D627C621AABE21E00101BA0 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D627C611AABE21E00101BA0 /* Company.swift */; };
+		3D627C641AABE47100101BA0 /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D627C631AABE47100101BA0 /* CompanyTableViewController.swift */; };
 		3DDF40D01AAA95CD00CEDE4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF40CF1AAA95CD00CEDE4F /* AppDelegate.swift */; };
 		3DDF40D21AAA95CD00CEDE4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF40D11AAA95CD00CEDE4F /* ViewController.swift */; };
 		3DDF40D51AAA95CD00CEDE4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF40D31AAA95CD00CEDE4F /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D627C611AABE21E00101BA0 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		3D627C631AABE47100101BA0 /* CompanyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
 		3DDF40CA1AAA95CD00CEDE4F /* Pre-Post Interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pre-Post Interview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDF40CE1AAA95CD00CEDE4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DDF40CF1AAA95CD00CEDE4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				3DDF41181AABA3D600CEDE4F /* BusinessButtonViewController.swift */,
 				3DDF40D31AAA95CD00CEDE4F /* Main.storyboard */,
 				3DDF40CD1AAA95CD00CEDE4F /* Supporting Files */,
+				3D627C611AABE21E00101BA0 /* Company.swift */,
+				3D627C631AABE47100101BA0 /* CompanyTableViewController.swift */,
 			);
 			path = "Pre-Post Interview";
 			sourceTree = "<group>";
@@ -240,8 +246,10 @@
 				3DDF40D01AAA95CD00CEDE4F /* AppDelegate.swift in Sources */,
 				3DDF41171AAB6FE200CEDE4F /* UpcomingTableViewController.swift in Sources */,
 				3DDF41191AABA3D600CEDE4F /* BusinessButtonViewController.swift in Sources */,
+				3D627C641AABE47100101BA0 /* CompanyTableViewController.swift in Sources */,
 				3DDF41131AAB556700CEDE4F /* RegisterViewController.swift in Sources */,
 				3DDF41151AAB579F00CEDE4F /* API.swift in Sources */,
+				3D627C621AABE21E00101BA0 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
