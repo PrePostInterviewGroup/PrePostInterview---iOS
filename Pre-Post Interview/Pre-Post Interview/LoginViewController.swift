@@ -55,13 +55,13 @@ class LoginViewController: UIViewController {
         
         let email = emailText.text;
         let userPassword = passwordText.text;
-     //   User.currentUser().loginToken(emailText.text, password: passwordText.text) { () -> Void in
-            
+        User.currentUser().loginToken(emailText.text, password: passwordText.text) { () -> Void in
+        
             self.dismissViewControllerAnimated(true, completion: nil)
             
         }
         
-  //  }
+    }
     
 
     override func didReceiveMemoryWarning() {

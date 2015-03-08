@@ -123,7 +123,7 @@ class User {
         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
             
             //                println(responseInfo)
-            println("hey")
+         
             
             let dataInfo = responseInfo["user"] as [String:AnyObject]
             self.token = dataInfo["authentication_token"] as? String
@@ -156,8 +156,8 @@ class User {
         
         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
             
-            //                println(responseInfo)
-            println("hey")
+                            println(responseInfo)
+       
             
             let dataInfo = responseInfo["user"] as [String:AnyObject]
             self.token = dataInfo["authentication_token"] as? String

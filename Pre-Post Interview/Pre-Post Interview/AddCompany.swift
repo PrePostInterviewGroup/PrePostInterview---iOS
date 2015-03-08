@@ -1,73 +1,25 @@
 //
-//  CompanyTableViewController.swift
+//  AddCompany.swift
 //  Pre-Post Interview
 //
-//  Created by William Judd on 3/7/15.
+//  Created by Jide Opeola on 3/8/15.
 //  Copyright (c) 2015 William Judd. All rights reserved.
 //
 
 import UIKit
 
-class CompanyTableViewController: UITableViewController {
+class AddCompany: UITableViewController {
+    @IBOutlet weak var companyName: UITextField!
 
-    var companies: [Company] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        println("hey")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        let options: [String:AnyObject] = [
-            
-            "endpoint" : "company",
-            "method" : "GET",
-            "body" : [
-                
-                "authentication_token": User.currentUser().token!
-                
-            ]
-            
-            
-        ]
-        
-        APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
-            
-            println(responseInfo)
-            
-            
-            if let companiesInfo = responseInfo["companies"] as? [[String:AnyObject]] {
-                
-                println(responseInfo)
-                
-                for companyInfo in companiesInfo {
-                    
-                    let company = Company(companyInfo: companyInfo)
-                    
-                    self.companies.append(company)
-                    
-                    
-                }
-                
-            }
-            
-            
-            
-            self.tableView.reloadData()
-            
-            // do something here after the request is done
-            
-        })
-        
     }
-    
-
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,30 +28,42 @@ class CompanyTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Potentially incomplete method implementation.
+//        // Return the number of sections.
+//        return 0
+//    }
+
+    @IBAction func saveCompany(sender: AnyObject) {
+        
+        println("this is the company name: \(companyName.text)")
+        Company.createCompany(companyName.text, completion: { () -> () in
+            
+            
+            
+        })
+        
+        
+        
     }
+    
+    
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return companies.count
-    }
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete method implementation.
+//        // Return the number of rows in the section.
+//        return 0
+//    }
 
-
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
-        let company = companies[indexPath.row]
-        
-        cell.textLabel?.text = company.name
-        
         // Configure the cell...
 
         return cell
     }
+    */
 
     /*
     // Override to support conditional editing of the table view.

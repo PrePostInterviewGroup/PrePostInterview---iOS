@@ -29,7 +29,19 @@ class TabBarC: UITabBarController {
         
 
     }
-
+    override func viewWillAppear(animated: Bool) {
+        if User.currentUser().token == nil {
+            
+            var loginNC = storyboard?.instantiateViewControllerWithIdentifier("loginNC") as UINavigationController
+            
+            presentViewController(loginNC, animated: false, completion: nil)
+            
+            
+            
+            
+            
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
