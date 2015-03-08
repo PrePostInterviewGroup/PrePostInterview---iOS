@@ -176,12 +176,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Y8-V7-cQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1274" y="-134"/>
+            <point key="canvasLocation" x="2616" y="1556"/>
         </scene>
-        <!--Register View Controller-->
+        <!--registerVC-->
         <scene sceneID="eK5-qb-7Ae">
             <objects>
-                <viewController id="Twr-gy-ag4" customClass="RegisterViewController" customModule="Pre_Post_Interview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="registerVC" id="Twr-gy-ag4" customClass="RegisterViewController" customModule="Pre_Post_Interview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ied-P7-pvr"/>
                         <viewControllerLayoutGuide type="bottom" id="PhK-6P-JkC"/>
@@ -335,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ar-fR-8eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2055" y="677"/>
+            <point key="canvasLocation" x="3359" y="1556"/>
         </scene>
         <!--Business Button View Controller-->
         <scene sceneID="8Zw-c6-pLX">
@@ -418,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAb-rt-xYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-591" y="-134"/>
+            <point key="canvasLocation" x="3359" y="731"/>
         </scene>
         <!--Tab BarC-->
         <scene sceneID="dGb-3F-ysk">
@@ -746,7 +746,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ch-PL-bK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="2282"/>
+            <point key="canvasLocation" x="1124" y="2966"/>
         </scene>
         <!--Add PositionVC-->
         <scene sceneID="GWD-te-You">
@@ -842,11 +842,11 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="FuW-Bb-jq7"/>
                                 <exclude reference="Bca-48-uk4"/>
                                 <exclude reference="Lqd-F7-oDq"/>
                                 <exclude reference="gVP-Zf-IVy"/>
                                 <exclude reference="nNg-sC-XsP"/>
+                                <exclude reference="FuW-Bb-jq7"/>
                                 <exclude reference="OHh-3O-mv2"/>
                                 <exclude reference="zu3-Ca-3ty"/>
                             </mask>
@@ -872,12 +872,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zo-0o-jXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576" y="2282"/>
+            <point key="canvasLocation" x="1124" y="3674"/>
         </scene>
         <!--Settings-->
         <scene sceneID="xcN-Kp-XOC">
             <objects>
-                <tableViewController id="ULc-RM-y6v" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="settingsTVC" id="ULc-RM-y6v" customClass="SettingsTableViewController" customModule="Pre_Post_Interview" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1Mm-YL-Xrg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -912,7 +912,16 @@
                             <outlet property="delegate" destination="ULc-RM-y6v" id="1wp-VF-iZh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="kP4-oe-1my"/>
+                    <navigationItem key="navigationItem" title="Settings" id="kP4-oe-1my">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="1tl-QX-E0L">
+                            <connections>
+                                <action selector="logoutButton:" destination="ULc-RM-y6v" id="Q7J-qo-zyK"/>
+                                <segue destination="8k6-eL-Msd" kind="popoverPresentation" popoverAnchorBarButtonItem="1tl-QX-E0L" id="bZ2-Ng-lDD">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slD-Ig-HhZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1006,7 +1015,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JY6-yP-FfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2086" y="-134"/>
+            <point key="canvasLocation" x="2616" y="731"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XVX-7l-zqR">
@@ -1034,7 +1043,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAZ-R3-c6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="2282"/>
+            <point key="canvasLocation" x="1124" y="2270"/>
         </scene>
     </scenes>
     <resources>
@@ -1043,4 +1052,7 @@
         <image name="jobber_login_pic_nonblur" width="418" height="393"/>
         <image name="tab_bar_image" width="620" height="49"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="B5P-f6-Fh8"/>
+    </inferredMetricsTieBreakers>
 </document>

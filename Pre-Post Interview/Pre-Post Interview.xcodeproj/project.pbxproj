@@ -15,6 +15,7 @@
 		08091BAC1AAC4A2200D6CD8C /* AddPositionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08091BAB1AAC4A2200D6CD8C /* AddPositionVC.swift */; };
 		08E48A211AAB9BEF0020B69D /* CircleButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E48A201AAB9BEF0020B69D /* CircleButtons.swift */; };
 		08E48A231AABB4010020B69D /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E48A221AABB4010020B69D /* TabBarC.swift */; };
+		3D627C661AAC858400101BA0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D627C651AAC858400101BA0 /* SettingsTableViewController.swift */; };
 		3DDF40D01AAA95CD00CEDE4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF40CF1AAA95CD00CEDE4F /* AppDelegate.swift */; };
 		3DDF40D21AAA95CD00CEDE4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF40D11AAA95CD00CEDE4F /* ViewController.swift */; };
 		3DDF40D51AAA95CD00CEDE4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF40D31AAA95CD00CEDE4F /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		08091BAB1AAC4A2200D6CD8C /* AddPositionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPositionVC.swift; sourceTree = "<group>"; };
 		08E48A201AAB9BEF0020B69D /* CircleButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtons.swift; sourceTree = "<group>"; };
 		08E48A221AABB4010020B69D /* TabBarC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
+		3D627C651AAC858400101BA0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		3DDF40CA1AAA95CD00CEDE4F /* Pre-Post Interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pre-Post Interview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDF40CE1AAA95CD00CEDE4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DDF40CF1AAA95CD00CEDE4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,14 +109,13 @@
 				3DDF41141AAB579F00CEDE4F /* API.swift */,
 				08091B9F1AAC007000D6CD8C /* BusinessButtonViewController.swift */,
 				08E48A201AAB9BEF0020B69D /* CircleButtons.swift */,
-				3DDF40D31AAA95CD00CEDE4F /* Main.storyboard */,
 				08091BAB1AAC4A2200D6CD8C /* AddPositionVC.swift */,
 				08091BA71AAC34E200D6CD8C /* AddCompany.swift */,
 				08E48A221AABB4010020B69D /* TabBarC.swift */,
-				3DDF40D61AAA95CD00CEDE4F /* Images.xcassets */,
-				3DDF40D81AAA95CD00CEDE4F /* LaunchScreen.xib */,
 				08091BA11AAC01AF00D6CD8C /* Company.swift */,
 				08091BA31AAC01B600D6CD8C /* CompanyTableViewController.swift */,
+				3D627C651AAC858400101BA0 /* SettingsTableViewController.swift */,
+				3DDF40D31AAA95CD00CEDE4F /* Main.storyboard */,
 				3DDF40CD1AAA95CD00CEDE4F /* Supporting Files */,
 			);
 			path = "Pre-Post Interview";
@@ -123,6 +124,8 @@
 		3DDF40CD1AAA95CD00CEDE4F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3DDF40D61AAA95CD00CEDE4F /* Images.xcassets */,
+				3DDF40D81AAA95CD00CEDE4F /* LaunchScreen.xib */,
 				3DDF40CE1AAA95CD00CEDE4F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -251,6 +254,7 @@
 				08091BA21AAC01AF00D6CD8C /* Company.swift in Sources */,
 				08E48A231AABB4010020B69D /* TabBarC.swift in Sources */,
 				3DDF41131AAB556700CEDE4F /* RegisterViewController.swift in Sources */,
+				3D627C661AAC858400101BA0 /* SettingsTableViewController.swift in Sources */,
 				08091BA41AAC01B600D6CD8C /* CompanyTableViewController.swift in Sources */,
 				08091BA81AAC34E200D6CD8C /* AddCompany.swift in Sources */,
 				08091BAC1AAC4A2200D6CD8C /* AddPositionVC.swift in Sources */,

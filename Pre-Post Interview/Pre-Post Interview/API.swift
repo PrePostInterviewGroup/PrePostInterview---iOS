@@ -156,7 +156,7 @@ class User {
         
         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
             
-            //                println(responseInfo)
+                            println(responseInfo)
        
             
             let dataInfo = responseInfo["user"] as [String:AnyObject]
