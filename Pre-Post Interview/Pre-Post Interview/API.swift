@@ -124,7 +124,7 @@ class User {
     
     
     
-    func createUserToken(email: String, password: String, verifyPassword: String) {
+    func createUserToken(email: String, password: String, verifyPassword: String, completion: () -> ()) {
         
         // sign up
         let options: [String:AnyObject] = [
@@ -135,25 +135,22 @@ class User {
                 
                 "user" : [ "email" : email, "password" : password, "password_confirmation" : verifyPassword]
                 
-                
             ]
             
-            
         ]
-        
-        APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
+       APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
             
-//                println(responseInfo)
+            //                println(responseInfo)
+            println("hey")
             
-            let dataInfo = responseInfo["user"] as [String:String]
-            self.token = dataInfo["authentication_token"]
+            let dataInfo = responseInfo["user"] as [String:AnyObject]
+            self.token = dataInfo["authentication_token"] as? String
             
+            completion()
             
             // do something here after the request is done
             
         })
-        
-        
         
     }
     
