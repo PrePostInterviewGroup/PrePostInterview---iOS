@@ -9,16 +9,16 @@
 import UIKit
 
 class UpcomingTableViewController: UITableViewController {
+   
     @IBAction func logoutButton(sender: AnyObject) {
     
         
     User.currentUser().logoutUserToken()
     
-        var loginVC = storyboard?.instantiateViewControllerWithIdentifier("loginVC") as LoginViewController
         
-        presentViewController(loginVC, animated: false, completion: nil)
-
-    println("hey")
+        var loginNC = storyboard?.instantiateViewControllerWithIdentifier("loginNC") as UINavigationController
+        
+        presentViewController(loginNC, animated: false, completion: nil)
     
     }
 
@@ -35,9 +35,9 @@ class UpcomingTableViewController: UITableViewController {
         
         if User.currentUser().token == nil {
             
-            var loginVC = storyboard?.instantiateViewControllerWithIdentifier("loginVC") as LoginViewController
+            var loginNC = storyboard?.instantiateViewControllerWithIdentifier("loginNC") as UINavigationController
             
-            presentViewController(loginVC, animated: false, completion: nil)
+            presentViewController(loginNC, animated: false, completion: nil)
             
             
             
