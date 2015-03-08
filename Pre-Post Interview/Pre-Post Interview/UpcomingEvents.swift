@@ -1,33 +1,25 @@
 //
-//  UpcomingTableViewController.swift
+//  UpcomingEvents.swift
 //  Pre-Post Interview
 //
-//  Created by William Judd on 3/7/15.
+//  Created by Jide Opeola on 3/7/15.
 //  Copyright (c) 2015 William Judd. All rights reserved.
 //
 
 import UIKit
 
-class UpcomingTableViewController: UITableViewController {
-   
-    @IBAction func logoutButton(sender: AnyObject) {
-    
-        
-    User.currentUser().logoutUserToken()
-    
-        
-        var loginNC = storyboard?.instantiateViewControllerWithIdentifier("loginNC") as UINavigationController
-        
-        presentViewController(loginNC, animated: false, completion: nil)
-    
-    }
+let SCREEN_WIDTH = UIScreen.mainScreen().bounds.width
+let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.height
+
+class UpcomingEvents: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-     
+        
     }
+    
     
     override func viewWillAppear(animated: Bool) {
         
@@ -42,11 +34,9 @@ class UpcomingTableViewController: UITableViewController {
             
             
         }
-    
-    
+        
+        
     }
-
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,24 +48,76 @@ class UpcomingTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 2
     }
 
+    
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return array.count
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+
+        
+        
+//        pomoRoundValue1.font = UIFont(name: "HelveticaNeue-Thin", size: 30)
+//        pomoRoundValue1.textColor = UIColor(red: 0.00, green: 0.57, blue: 0.95, alpha: 1)
+        
+        return "hey"
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        var myLabel: UILabel!
+       
+        myLabel = UILabel(frame: CGRectMake((SCREEN_WIDTH / 2) - 90, 8, 180, 30))
+        myLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 24)
+        myLabel.textColor = UIColor(red: 0.58, green: 0.84, blue: 0.79, alpha: 1)
+        myLabel.text = "March 17, 2015"
+        
+        
+        var sectionView = UIView()
+        
+        sectionView.backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1)
+        
+        
+    //    sectionView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+        
+        sectionView.addSubview(myLabel)
+        
+        
+        return sectionView
     }
 
-    /*
+  
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        
+        
+        
+        return 50
+    }
+    
+    var array = ["hey","you","guys"]
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("upcomingCell", forIndexPath: indexPath) as UITableViewCell
+        
+        var newProject = array[indexPath.row]
+        
+        println(newProject)
+        
+        cell.textLabel?.text = newProject
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
