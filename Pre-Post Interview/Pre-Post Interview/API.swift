@@ -8,7 +8,9 @@
 
 import Foundation
 
-let API_URL = "http://brian.t.proxylocal.com/"
+//let API_URL = "http://brian.t.proxylocal.com/"
+
+let API_URL = "https://pre-post-interview.herokuapp.com/"
 
 typealias ResponseBlock = (responseInfo: [String:AnyObject]) -> ()
 
@@ -23,8 +25,8 @@ class APIRequest {
             "endpoint" : endpoint,
             "method" : method,
             "body" : [
-
-            "auth_token" : [User.currentUser().token!]]] as [String: AnyObject]
+                
+                "auth_token" : [User.currentUser().token!]]] as [String: AnyObject]
         
         requestWithOptions(options, andCompletion: completion)
         
@@ -96,7 +98,7 @@ class User {
         let defaults = NSUserDefaults.standardUserDefaults()
         token = defaults.objectForKey("token") as? String
         
-//        println(token)
+        //        println(token)
         
     }
     
@@ -118,10 +120,10 @@ class User {
             ]
             
         ]
-       APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
+        APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
             
             //                println(responseInfo)
-            println("hey")
+         
             
             let dataInfo = responseInfo["user"] as [String:AnyObject]
             self.token = dataInfo["authentication_token"] as? String
@@ -137,7 +139,7 @@ class User {
     func loginToken(email: String, password: String, completion: () -> ()) {
         
         // login
-//        println(email)
+        //        println(email)
         let options: [String:AnyObject] = [
             
             "endpoint" : "users/sign_in",
@@ -154,8 +156,8 @@ class User {
         
         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
             
-//                println(responseInfo)
-                println("hey")
+            //                println(responseInfo)
+       
             
             let dataInfo = responseInfo["user"] as [String:AnyObject]
             self.token = dataInfo["authentication_token"] as? String
@@ -180,7 +182,7 @@ class User {
             "body" : [
                 
                 "authentication_token": token!
-        
+                
             ]
         ]
         
@@ -192,7 +194,7 @@ class User {
         })
         
         token = nil
-
+        
         
     }
     

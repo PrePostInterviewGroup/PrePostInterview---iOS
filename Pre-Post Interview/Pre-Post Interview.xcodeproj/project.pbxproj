@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D627C621AABE21E00101BA0 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D627C611AABE21E00101BA0 /* Company.swift */; };
-		3D627C641AABE47100101BA0 /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D627C631AABE47100101BA0 /* CompanyTableViewController.swift */; };
+		08091B9E1AABD32B00D6CD8C /* UpcomingEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08091B9D1AABD32B00D6CD8C /* UpcomingEvents.swift */; };
+		08091BA01AAC007000D6CD8C /* BusinessButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08091B9F1AAC007000D6CD8C /* BusinessButtonViewController.swift */; };
+		08091BA21AAC01AF00D6CD8C /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08091BA11AAC01AF00D6CD8C /* Company.swift */; };
+		08091BA41AAC01B600D6CD8C /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08091BA31AAC01B600D6CD8C /* CompanyTableViewController.swift */; };
+		08091BA81AAC34E200D6CD8C /* AddCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08091BA71AAC34E200D6CD8C /* AddCompany.swift */; };
+		08091BAC1AAC4A2200D6CD8C /* AddPositionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08091BAB1AAC4A2200D6CD8C /* AddPositionVC.swift */; };
+		08E48A211AAB9BEF0020B69D /* CircleButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E48A201AAB9BEF0020B69D /* CircleButtons.swift */; };
+		08E48A231AABB4010020B69D /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E48A221AABB4010020B69D /* TabBarC.swift */; };
 		3DDF40D01AAA95CD00CEDE4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF40CF1AAA95CD00CEDE4F /* AppDelegate.swift */; };
 		3DDF40D21AAA95CD00CEDE4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF40D11AAA95CD00CEDE4F /* ViewController.swift */; };
 		3DDF40D51AAA95CD00CEDE4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF40D31AAA95CD00CEDE4F /* Main.storyboard */; };
@@ -18,8 +24,6 @@
 		3DDF41111AAB518F00CEDE4F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF41101AAB518F00CEDE4F /* LoginViewController.swift */; };
 		3DDF41131AAB556700CEDE4F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF41121AAB556700CEDE4F /* RegisterViewController.swift */; };
 		3DDF41151AAB579F00CEDE4F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF41141AAB579F00CEDE4F /* API.swift */; };
-		3DDF41171AAB6FE200CEDE4F /* UpcomingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF41161AAB6FE200CEDE4F /* UpcomingTableViewController.swift */; };
-		3DDF41191AABA3D600CEDE4F /* BusinessButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF41181AABA3D600CEDE4F /* BusinessButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D627C611AABE21E00101BA0 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		3D627C631AABE47100101BA0 /* CompanyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
+		08091B9D1AABD32B00D6CD8C /* UpcomingEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEvents.swift; sourceTree = "<group>"; };
+		08091B9F1AAC007000D6CD8C /* BusinessButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessButtonViewController.swift; sourceTree = "<group>"; };
+		08091BA11AAC01AF00D6CD8C /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		08091BA31AAC01B600D6CD8C /* CompanyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
+		08091BA71AAC34E200D6CD8C /* AddCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompany.swift; sourceTree = "<group>"; };
+		08091BAB1AAC4A2200D6CD8C /* AddPositionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPositionVC.swift; sourceTree = "<group>"; };
+		08E48A201AAB9BEF0020B69D /* CircleButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtons.swift; sourceTree = "<group>"; };
+		08E48A221AABB4010020B69D /* TabBarC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
 		3DDF40CA1AAA95CD00CEDE4F /* Pre-Post Interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pre-Post Interview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDF40CE1AAA95CD00CEDE4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DDF40CF1AAA95CD00CEDE4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +58,6 @@
 		3DDF41101AAB518F00CEDE4F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3DDF41121AAB556700CEDE4F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3DDF41141AAB579F00CEDE4F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		3DDF41161AAB6FE200CEDE4F /* UpcomingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewController.swift; sourceTree = "<group>"; };
-		3DDF41181AABA3D600CEDE4F /* BusinessButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,14 +99,23 @@
 		3DDF40CC1AAA95CD00CEDE4F /* Pre-Post Interview */ = {
 			isa = PBXGroup;
 			children = (
-				3DDF411A1AABA3E400CEDE4F /* Login/Register */,
-				3DDF41161AAB6FE200CEDE4F /* UpcomingTableViewController.swift */,
+				3DDF41101AAB518F00CEDE4F /* LoginViewController.swift */,
+				3DDF41121AAB556700CEDE4F /* RegisterViewController.swift */,
+				08091B9D1AABD32B00D6CD8C /* UpcomingEvents.swift */,
+				3DDF40CF1AAA95CD00CEDE4F /* AppDelegate.swift */,
+				3DDF40D11AAA95CD00CEDE4F /* ViewController.swift */,
 				3DDF41141AAB579F00CEDE4F /* API.swift */,
-				3DDF41181AABA3D600CEDE4F /* BusinessButtonViewController.swift */,
+				08091B9F1AAC007000D6CD8C /* BusinessButtonViewController.swift */,
+				08E48A201AAB9BEF0020B69D /* CircleButtons.swift */,
 				3DDF40D31AAA95CD00CEDE4F /* Main.storyboard */,
+				08091BAB1AAC4A2200D6CD8C /* AddPositionVC.swift */,
+				08091BA71AAC34E200D6CD8C /* AddCompany.swift */,
+				08E48A221AABB4010020B69D /* TabBarC.swift */,
+				3DDF40D61AAA95CD00CEDE4F /* Images.xcassets */,
+				3DDF40D81AAA95CD00CEDE4F /* LaunchScreen.xib */,
+				08091BA11AAC01AF00D6CD8C /* Company.swift */,
+				08091BA31AAC01B600D6CD8C /* CompanyTableViewController.swift */,
 				3DDF40CD1AAA95CD00CEDE4F /* Supporting Files */,
-				3D627C611AABE21E00101BA0 /* Company.swift */,
-				3D627C631AABE47100101BA0 /* CompanyTableViewController.swift */,
 			);
 			path = "Pre-Post Interview";
 			sourceTree = "<group>";
@@ -106,10 +123,6 @@
 		3DDF40CD1AAA95CD00CEDE4F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3DDF40D61AAA95CD00CEDE4F /* Images.xcassets */,
-				3DDF40D81AAA95CD00CEDE4F /* LaunchScreen.xib */,
-				3DDF40CF1AAA95CD00CEDE4F /* AppDelegate.swift */,
-				3DDF40D11AAA95CD00CEDE4F /* ViewController.swift */,
 				3DDF40CE1AAA95CD00CEDE4F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -130,15 +143,6 @@
 				3DDF40E41AAA95CE00CEDE4F /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3DDF411A1AABA3E400CEDE4F /* Login/Register */ = {
-			isa = PBXGroup;
-			children = (
-				3DDF41101AAB518F00CEDE4F /* LoginViewController.swift */,
-				3DDF41121AAB556700CEDE4F /* RegisterViewController.swift */,
-			);
-			name = Login/Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +248,16 @@
 				3DDF41111AAB518F00CEDE4F /* LoginViewController.swift in Sources */,
 				3DDF40D21AAA95CD00CEDE4F /* ViewController.swift in Sources */,
 				3DDF40D01AAA95CD00CEDE4F /* AppDelegate.swift in Sources */,
-				3DDF41171AAB6FE200CEDE4F /* UpcomingTableViewController.swift in Sources */,
-				3DDF41191AABA3D600CEDE4F /* BusinessButtonViewController.swift in Sources */,
-				3D627C641AABE47100101BA0 /* CompanyTableViewController.swift in Sources */,
+				08091BA21AAC01AF00D6CD8C /* Company.swift in Sources */,
+				08E48A231AABB4010020B69D /* TabBarC.swift in Sources */,
 				3DDF41131AAB556700CEDE4F /* RegisterViewController.swift in Sources */,
+				08091BA41AAC01B600D6CD8C /* CompanyTableViewController.swift in Sources */,
+				08091BA81AAC34E200D6CD8C /* AddCompany.swift in Sources */,
+				08091BAC1AAC4A2200D6CD8C /* AddPositionVC.swift in Sources */,
 				3DDF41151AAB579F00CEDE4F /* API.swift in Sources */,
-				3D627C621AABE21E00101BA0 /* Company.swift in Sources */,
+				08091B9E1AABD32B00D6CD8C /* UpcomingEvents.swift in Sources */,
+				08091BA01AAC007000D6CD8C /* BusinessButtonViewController.swift in Sources */,
+				08E48A211AAB9BEF0020B69D /* CircleButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,52 +1,25 @@
 //
-//  UpcomingTableViewController.swift
+//  AddCompany.swift
 //  Pre-Post Interview
 //
-//  Created by William Judd on 3/7/15.
+//  Created by Jide Opeola on 3/8/15.
 //  Copyright (c) 2015 William Judd. All rights reserved.
 //
 
 import UIKit
 
-class UpcomingTableViewController: UITableViewController {
-   
-    @IBAction func logoutButton(sender: AnyObject) {
-    
-        
-    User.currentUser().logoutUserToken()
-    
-        
-        var loginNC = storyboard?.instantiateViewControllerWithIdentifier("loginNC") as UINavigationController
-        
-        presentViewController(loginNC, animated: false, completion: nil)
-    
-    }
+class AddCompany: UITableViewController {
+    @IBOutlet weak var companyName: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-     
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        
-        println("yo\(User.currentUser().token)")
-        
-        if User.currentUser().token == nil {
-            
-            var loginNC = storyboard?.instantiateViewControllerWithIdentifier("loginNC") as UINavigationController
-            
-            presentViewController(loginNC, animated: false, completion: nil)
-            
-            
-            
-        }
-    
-    
-    }
 
-    
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,17 +28,32 @@ class UpcomingTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Potentially incomplete method implementation.
+//        // Return the number of sections.
+//        return 0
+//    }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
+    @IBAction func saveCompany(sender: AnyObject) {
+        
+        println("this is the company name: \(companyName.text)")
+        Company.createCompany(companyName.text, completion: { () -> () in
+            
+            
+            
+        })
+        
+        
+        
     }
+    
+    
+
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete method implementation.
+//        // Return the number of rows in the section.
+//        return 0
+//    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

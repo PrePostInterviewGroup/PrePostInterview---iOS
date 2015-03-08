@@ -34,7 +34,7 @@ class Company: NSObject {
                 "authentication_token": User.currentUser().token!, "name": name
                 
             ]
-            
+        
             
         ]
         
@@ -42,7 +42,7 @@ class Company: NSObject {
             
             //                println(responseInfo)
             
-            
+            println(responseInfo)
             let dataInfo = responseInfo["company"] as [String:AnyObject]
             
             let company = Company(companyInfo: dataInfo)
