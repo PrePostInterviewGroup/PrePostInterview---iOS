@@ -23,13 +23,15 @@ class UpcomingEvents: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         
-        println("yo\(User.currentUser().token)")
+     // println(User.currentUser().token)
         
         if User.currentUser().token == nil {
             
             var loginNC = storyboard?.instantiateViewControllerWithIdentifier("loginNC") as UINavigationController
             
             presentViewController(loginNC, animated: false, completion: nil)
+            
+            
             
             
             
@@ -109,7 +111,9 @@ class UpcomingEvents: UITableViewController {
         
         var newProject = array[indexPath.row]
         
-        println(newProject)
+        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 20)
+        cell.textLabel?.textColor = UIColor(red: 0.58, green: 0.84, blue: 0.79, alpha: 1)
+       
         
         cell.textLabel?.text = newProject
 

@@ -12,7 +12,7 @@ class BusinessButtonViewController: UIViewController {
 
     @IBAction func cancelButton(sender: AnyObject) {
    
-        println("yo")
+  
         
 //        self.navigationController?.popToRootViewControllerAnimated(true)
 
@@ -22,7 +22,12 @@ class BusinessButtonViewController: UIViewController {
     }
     
     @IBAction func bigButton(sender: AnyObject) {
-   
+        
+        
+        
+        var listComp = storyboard?.instantiateViewControllerWithIdentifier("compNavi") as UINavigationController
+        
+        presentViewController(listComp, animated: false, completion: nil)
         
     
     }
